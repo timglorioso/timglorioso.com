@@ -1,0 +1,10 @@
+@import 'misc';
+
+$accent-color: #000;
+
+@include accent($accent-color);
+
+#rows {
+   margin: 0;
+   padding: 0;
+}

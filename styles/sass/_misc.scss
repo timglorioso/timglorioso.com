@@ -1,0 +1,10 @@
+@mixin accent($color) {
+
+   a {
+      color: $color;
+
+      &:hover:not(.tab) {
+         color: lighten($color, 3%);
+      }
+   }
+}

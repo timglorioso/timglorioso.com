@@ -1,0 +1,51 @@
+@media (max-width: 800px) {
+
+   main {
+      padding: 0 2%;
+   }
+
+   #tab-title {
+      padding-top: .65em;
+      font-size: .875em;
+   }
+
+   p {
+      font-size: .5em;
+   }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+   #tab-title {
+      padding-top: .55em;
+      font-size: 1.25em;
+   }
+
+   p {
+      font-size: .5em;
+   }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+
+   #tab-title {
+      padding-top: .55em;
+      font-size: 1.5em;
+   }
+
+   p {
+      font-size: .625em;
+   }
+}
+
+@media (min-width: 1600px) {
+
+   #tab-title {
+      padding-top: .6em;
+      font-size: 1.75em;
+   }
+
+   p {
+      font-size: .75em;
+   }
+}

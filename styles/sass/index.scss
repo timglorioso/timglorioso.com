@@ -1,0 +1,10 @@
+@import 'misc';
+
+$accent-color: #000;
+
+@include accent($accent-color);
+
+main {
+   font-size: 2.4em; // mimic "row" class rules in base.scss
+   text-align: center;
+}
