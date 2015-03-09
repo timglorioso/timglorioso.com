@@ -1,31 +1,48 @@
 @media (max-width: 800px) {
-  main {
-    padding: 0 2%; }
+  h1 {
+    font-size: .75em; }
 
   #tab-title {
-    padding-top: .65em;
     font-size: .875em; }
 
   p {
-    font-size: .5em; } }
+    font-size: .5em; }
+
+  main {
+    width: 90%; } }
 @media (min-width: 800px) and (max-width: 1200px) {
+  h1 {
+    font-size: 1em; }
+
   #tab-title {
-    padding-top: .55em;
     font-size: 1.25em; }
 
   p {
-    font-size: .5em; } }
+    font-size: .5em; }
+
+  main {
+    width: 84%; } }
 @media (min-width: 1200px) and (max-width: 1600px) {
+  h1 {
+    font-size: 1.125em; }
+
   #tab-title {
-    padding-top: .55em;
     font-size: 1.5em; }
 
   p {
-    font-size: .625em; } }
+    font-size: .625em; }
+
+  main {
+    width: 60%; } }
 @media (min-width: 1600px) {
+  h1 {
+    font-size: 1.375em; }
+
   #tab-title {
-    padding-top: .6em;
     font-size: 1.75em; }
 
   p {
-    font-size: .75em; } }
+    font-size: .75em; }
+
+  main {
+    width: 48%; } }
