@@ -13,10 +13,6 @@ body {
 a {
   text-decoration: none; }
 
-.row {
-  margin: 0;
-  width: 100%;
-  list-style-type: none; }
 
 nav {
   font-family: 'Silkscreen', monospace;
@@ -58,9 +54,6 @@ main {
 p {
   margin-bottom: 0; }
 
-.row {
-  height: 2.7em;
-  font-size: 2.4em; }
 
 nav {
   height: 2.7em;

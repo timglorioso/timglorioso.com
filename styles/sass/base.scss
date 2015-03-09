@@ -20,10 +20,6 @@ a {
    text-decoration: none;
 }
 
-.row {
-   margin: 0;
-   width: 100%;
-   list-style-type: none;
 }
 
 nav {
@@ -85,11 +81,6 @@ p {
 $tab-dim: 1.8em;
 $nav-dim: 2.4em;
 $tab-border-dim: ($nav-dim - $tab-dim) / 2;
-
-.row {
-   height: $nav-dim + $tab-border-dim;
-   font-size: $nav-dim;
-}
 
 nav {
    height: $nav-dim + $tab-border-dim;

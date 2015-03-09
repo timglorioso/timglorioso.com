@@ -3,6 +3,11 @@ a {
   a:hover:not(.tab) {
     color: #080808; }
 
-#rows {
+#posts {
   margin: 0;
   padding: 0; }
+
+.post {
+  margin: 0;
+  width: 100%;
+  list-style-type: none; }
