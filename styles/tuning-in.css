@@ -1,7 +1,19 @@
 a {
-  color: #000; }
+  color: #eecc2a; }
   a:hover:not(.tab) {
-    color: #080808; }
+    color: #ceac0a; }
+
+nav {
+  background-color: #eecc2a; }
+
+#nav-base {
+  background-color: #eecc2a; }
+
+.tab {
+  color: #eecc2a;
+  border-color: #ceac0a; }
+  .tab:not(.selected) {
+    background-color: #fff; }
 
 #posts {
   margin: 0;

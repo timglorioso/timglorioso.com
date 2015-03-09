@@ -1,7 +1,19 @@
 a {
-  color: #000; }
+  color: #45ccc4; }
   a:hover:not(.tab) {
-    color: #080808; }
+    color: #25aca4; }
+
+nav {
+  background-color: #45ccc4; }
+
+#nav-base {
+  background-color: #45ccc4; }
+
+.tab {
+  color: #45ccc4;
+  border-color: #25aca4; }
+  .tab:not(.selected) {
+    background-color: #fff; }
 
 main {
   font-size: 2.4em;
