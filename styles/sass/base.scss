@@ -20,6 +20,8 @@ a {
    text-decoration: none;
 }
 
+h1 {
+   font-family: 'Silkscreen', monospace;
 }
 
 nav {
@@ -38,7 +40,7 @@ nav {
    position: relative;
    float: left;
    color: #88888f;
-   background-color: #bbbbbf;
+   background-color: #cccccf;
 
    &.selected {
       background-color: #fff;
@@ -52,17 +54,13 @@ nav {
 
 main {
    margin: auto;
-   max-width: 650px;
-   font-family: 'Chivo', serif;
+   font-family: 'Chivo', sans-serif;
    font-weight: 400;
    color: #88888f;
 }
 
-#tab-title {
-   margin: 0;
-   font-family: 'silkscreen', monospace;
+h1 {
    font-weight: 400;
-   text-align: center;
    color: #88888f;
 
    span {
@@ -70,8 +68,8 @@ main {
    }
 }
 
-p {
-   margin-bottom: 0;
+#tab-title {
+   text-align: center;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
