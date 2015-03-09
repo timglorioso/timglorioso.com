@@ -5,6 +5,5 @@ $accent-color: #45ccc4;
 @include accent($accent-color);
 
 main {
-   font-size: 2.4em; // mimic "row" class rules in base.scss
    text-align: center;
 }

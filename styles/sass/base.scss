@@ -109,6 +109,14 @@ nav {
    }
 }
 
+main {
+   font-size: $nav-dim;
+}
+
+#tab-title {
+   font-size: $nav-dim;
+}
+
 #tg > span {
    top: .44em;
    left: .26em;

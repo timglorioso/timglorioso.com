@@ -75,6 +75,12 @@ nav {
   .tab:not(.selected):hover {
     top: 0.45em; }
 
+main {
+  font-size: 2.4em; }
+
+#tab-title {
+  font-size: 2.4em; }
+
 #tg > span {
   top: .44em;
   left: .26em; }
