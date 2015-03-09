@@ -4,7 +4,25 @@
       color: $color;
 
       &:hover:not(.tab) {
-         color: lighten($color, 3%);
+         // color: rgb(red($color) + 16, green($color) + 16, blue($color) + 16);
+         color: rgb(red($color) - 32, green($color) - 32, blue($color) - 32);
+      }
+   }
+
+   nav {
+      background-color: $color;
+   }
+
+   #nav-base {
+      background-color: $color;
+   }
+
+   .tab {
+      color: $color;
+      border-color: rgb(red($color) - 32, green($color) - 32, blue($color) - 32);
+
+      &:not(.selected) {
+         background-color: #fff;
       }
    }
 }
