@@ -108,6 +108,8 @@ nav {
 }
 
 main {
+   margin-top: 1em;
+   padding-bottom: $nav-dim + $tab-border-dim;
    font-size: $nav-dim;
 }
 
