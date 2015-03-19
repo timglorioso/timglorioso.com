@@ -1,4 +1,5 @@
-@media (max-width: 800px) {
+// target devices: phones (portrait)
+@media (max-width: 500px) {
 
    h1 {
       font-size: .75em;
@@ -17,7 +18,8 @@
    }
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+// target devices: tablets (portrait), phones (landscape)
+@media (min-width: 500px) and (max-width: 900px) {
 
    h1 {
       font-size: 1em;
@@ -32,11 +34,12 @@
    }
 
    main {
-      width: 84%;
+      width: 75%;
    }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+// target devices: small/medium desktop displays, tablets (landscape)
+@media (min-width: 900px) and (max-width: 1400px) {
 
    h1 {
       font-size: 1.125em;
@@ -55,7 +58,8 @@
    }
 }
 
-@media (min-width: 1600px) {
+// target devices: large desktop displays
+@media (min-width: 1400px) and (max-width: 2000px) {
 
    h1 {
       font-size: 1.375em;
@@ -70,6 +74,26 @@
    }
 
    main {
-      width: 48%;
+      width: 55%;
+   }
+}
+
+// target devices: very large desktop displays
+@media (min-width: 2000px) {
+
+   h1 {
+      font-size: 1.5em;
+   }
+
+   #tab-title {
+      font-size: 1.875em;
+   }
+
+   p {
+      font-size: .875em;
+   }
+
+   main {
+      width: 50%;
    }
 }
