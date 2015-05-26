@@ -1,0 +1,37 @@
+// _fonts.scss
+//
+// Sets up all font styles, excepting size (taken care of in viewports.scss).
+
+@import 'util';
+
+$font-name: 'Clear Sans';
+
+@font-face {
+   src: url('http://timglorioso.com/assets/fonts/clearsans-light.woff')
+        format('woff');
+   @include set-font($font-name, normal, 300);
+}
+
+@font-face {
+   src: url('http://timglorioso.com/assets/fonts/clearsans-regular.woff')
+        format('woff');
+   @include set-font($font-name, normal, 400);
+}
+
+@font-face {
+   src: url('http://timglorioso.com/assets/fonts/clearsans-italic.woff')
+        format('woff');
+   @include set-font($font-name, italic, 400);
+}
+
+@font-face {
+   src: url('http://timglorioso.com/assets/fonts/clearsans-medium.woff')
+        format('woff');
+   @include set-font($font-name, normal, 500);
+}
+
+@font-face {
+   src: url('http://timglorioso.com/assets/fonts/clearsans-mediumitalic.woff')
+        format('woff');
+   @include set-font($font-name, italic, 500);
+}

@@ -1,0 +1,74 @@
+@mixin set-font($stack, $style, $weight) {
+
+   font-family: $stack;
+   font-style: $style;
+   font-weight: $weight;
+}
+
+@mixin set-colors($text: null, $background: null, $border: null) {
+
+   color: $text;
+   background-color: $background;
+
+   @if $border {
+      border-bottom: 0 solid $border;
+      text-decoration: none;
+   }
+}
+
+@mixin on-hover-focus($property, $value) {
+
+   &:hover, &:focus {
+      #{$property}: $value;
+   }
+}
+
+@mixin set-dimensions($margins: null, $paddings: null, $widths: null,
+                      $font-sizes: null, $nav-pos: null) {
+
+   nav {
+      @if $nav-pos {
+         position: $nav-pos;
+      } @else {
+         margin: auto;
+      }
+      padding: map-get($paddings, 'nav');
+      width: map-get($widths, 'nav');
+
+      a {
+         font-size: map-get($font-sizes, 'a');
+      }
+
+      #logo {
+         @if $nav-pos == null {
+            margin-top: 2.5em;
+         }
+
+         img {
+            width: map-get($widths, 'nav');
+            // reset font-size to equate width ems
+            font-size: 16px;
+         }
+      }
+   }
+
+   main {
+      @if $nav-pos {
+         margin-left: map-get($margins, 'main');
+      }
+      padding: map-get($paddings, 'main');
+      width: map-get($widths, 'main');
+
+      h1 {
+         font-size: map-get($font-sizes, 'h1');
+      }
+
+      h2 {
+         font-size: map-get($font-sizes, 'h2');
+      }
+
+      p, li {
+         font-size: map-get($font-sizes, 'p');
+      }
+   }
+}
