@@ -29,7 +29,7 @@
    @include set-dimensions($margins: ('main': 22%),
                            $paddings: ('nav': 4em, 'main': 6em 4em),
                            $widths: ('nav': 6em, 'main': 60%),
-                           $font-sizes: ('a': 1.5em, 'h1': 2em, 'h2': 1.5em,
+                           $font-sizes: ('a': 1.625em, 'h1': 2em, 'h2': 1.5em,
                                          'p': 1.25em),
                            $nav-pos: fixed);
 }
