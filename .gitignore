@@ -1,5 +1,7 @@
 .DS_Store
-npm-debug.log
-node_modules
-styles/*.css
+assets/styles/*.css
+assets/fonts/
+assets/images/
 .sass-cache/
+test.html
+test.css
