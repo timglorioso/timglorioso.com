@@ -1,9 +1,0 @@
-@import 'misc';
-
-$accent-color: #45ccc4;
-
-@include accent($accent-color);
-
-main {
-   text-align: center;
-}
