@@ -8,14 +8,13 @@
 
 $font-stack: $font-name, sans-serif;
 
-$dark-gray: #555555;
-$light-gray: #888888;
+$grayscale: #444 #888 #ccc;
 $cyan: #00ebff;
 $purple: #eb00ff;
 
 a {
    @include set-font($font-stack, normal, 400);
-   @include set-colors($light-gray, null, $cyan);
+   @include set-colors(nth($grayscale, 2), null, $cyan);
    @include on-hover-focus(border-color, $purple);
 
    border-bottom-width: 2px;
@@ -47,7 +46,7 @@ nav {
 
 main {
    @include set-font($font-stack, normal, 400);
-   @include set-colors($dark-gray);
+   @include set-colors(nth($grayscale, 1));
 
    line-height: 1.8;
 
@@ -57,7 +56,7 @@ main {
 
    h1, h2 {
       @include set-font($font-stack, normal, 300);
-      @include set-colors($light-gray);
+      @include set-colors(nth($grayscale, 2));
    }
 
    h2 {
