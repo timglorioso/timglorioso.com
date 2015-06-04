@@ -74,4 +74,12 @@ main {
    p {
       margin: 1.5em 0;
    }
+
+   hr {
+      margin: 4em 0;
+      border: 0;
+      width: 1em;
+      height: 1em;
+      background-color: nth($grayscale, 3);
+   }
 }

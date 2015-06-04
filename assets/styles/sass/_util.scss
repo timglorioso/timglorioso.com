@@ -55,6 +55,10 @@
    main {
       @if $nav-pos {
          margin-left: map-get($margins, 'main');
+      } @else {
+         hr {
+            margin: 4em auto;
+         }
       }
       padding: map-get($paddings, 'main');
       width: map-get($widths, 'main');
