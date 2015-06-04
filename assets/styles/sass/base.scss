@@ -56,7 +56,7 @@ main {
    }
 
    h1, h2 {
-      @include set-font($font-stack, normal, 500);
+      @include set-font($font-stack, normal, 300);
       @include set-colors($light-gray);
    }
 
