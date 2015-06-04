@@ -10,8 +10,8 @@
 
    @include set-dimensions($paddings: ('nav': 5%, 'main': 5%),
                            $widths: ('nav': 7em, 'main': 90%),
-                           $font-sizes: ('a': 1.75em, 'h1': 1.75em,
-                                         'h2': 1.25em, 'p': 1em));
+                           $font-sizes: ('a': 1.75em, 'h1': 2.25em,
+                                         'h2': 1.5em, 'p': 1.125em));
 }
 
 // tablets (portrait), phones (landscape)
@@ -19,7 +19,7 @@
 
    @include set-dimensions($paddings: ('nav': 8%, 'main': 8%),
                            $widths: ('nav': 8em, 'main': 84%),
-                           $font-sizes: ('a': 2em, 'h1': 2em, 'h2': 1.5em,
+                           $font-sizes: ('a': 2em, 'h1': 2.5em, 'h2': 1.75em,
                                          'p': 1.25em));
 }
 
@@ -29,8 +29,8 @@
    @include set-dimensions($margins: ('main': 22%),
                            $paddings: ('nav': 4em, 'main': 6em 4em),
                            $widths: ('nav': 6em, 'main': 60%),
-                           $font-sizes: ('a': 1.625em, 'h1': 2em, 'h2': 1.5em,
-                                         'p': 1.25em),
+                           $font-sizes: ('a': 1.625em, 'h1': 2.5em,
+                                         'h2': 1.75em, 'p': 1.25em),
                            $nav-pos: fixed);
 }
 
@@ -40,8 +40,8 @@
    @include set-dimensions($margins: ('main': 24%),
                            $paddings: ('nav': 5em, 'main': 7em 5em),
                            $widths: ('nav': 7em, 'main': 55%),
-                           $font-sizes: ('a': 1.75em, 'h1': 2.25em,
-                                         'h2': 1.75em, 'p': 1.5em),
+                           $font-sizes: ('a': 1.75em, 'h1': 2.75em,
+                                         'h2': 2em, 'p': 1.5em),
                            $nav-pos: fixed);
 }
 
@@ -51,7 +51,7 @@
    @include set-dimensions($margins: ('main': 25%),
                            $paddings: ('nav': 6em, 'main': 9em 6em),
                            $widths: ('nav': 8em, 'main': 50%),
-                           $font-sizes: ('a': 2em, 'h1': 2.5em, 'h2': 2em,
+                           $font-sizes: ('a': 2em, 'h1': 3em, 'h2': 2.25em,
                                          'p': 1.75em),
                            $nav-pos: fixed);
 }
