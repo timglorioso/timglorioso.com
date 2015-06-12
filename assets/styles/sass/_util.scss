@@ -16,11 +16,21 @@
    }
 }
 
-@mixin on-hover-focus($property, $value) {
+@mixin on-hover-focus($property, $value, $duration: null) {
+
+   @if $duration {
+      transition: $property $duration linear;
+   }
 
    &:hover, &:focus {
       #{$property}: $value;
    }
+}
+
+@mixin light-text-on-dark {
+
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin set-dimensions($margins: null, $paddings: null, $widths: null,
