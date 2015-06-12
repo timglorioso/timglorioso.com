@@ -23,15 +23,3 @@ $font-name: 'Clear Sans';
         format('woff');
    @include set-font($font-name, italic, 400);
 }
-
-@font-face {
-   src: url('http://timglorioso.com/assets/fonts/clearsans-medium.woff')
-        format('woff');
-   @include set-font($font-name, normal, 500);
-}
-
-@font-face {
-   src: url('http://timglorioso.com/assets/fonts/clearsans-mediumitalic.woff')
-        format('woff');
-   @include set-font($font-name, italic, 500);
-}
