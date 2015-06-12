@@ -3,5 +3,5 @@ assets/styles/*.css
 assets/fonts/
 assets/images/
 .sass-cache/
-test.html
-test.css
+test.*
+*.css.map
