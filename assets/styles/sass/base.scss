@@ -9,55 +9,60 @@
 
 $font-stack: $font-name, sans-serif;
 
-$grayscale: #444 #888 #ccc;
-$cyan: #00ebff;
-$purple: #eb00ff;
-
 a {
-   @include set-font($font-stack, normal, 400);
-   @include set-colors(nth($grayscale, 2), null, $cyan);
-   @include on-hover-focus(border-color, $purple);
 
-   border-bottom-width: 2px;
+   @include set-font($font-stack, normal, 400);
+   @include set-colors($text: #fff, $border: #888);
 }
 
-nav {
+header {
    text-align: center;
 
-   a {
-      @include set-font($font-stack, normal, 300);
+   @include set-colors($background: $base-color);
 
-      display: inline-block;
-      margin-bottom: .75em;
-      text-transform: lowercase;
+   nav {
+
+      a {
+         padding: .5em 1.1em .7em 1.1em;
+         font-size: 1.25em;
+         text-transform: lowercase;
+
+         @include set-colors($background: $base-color + #111,
+                             $border: $base-color + #111);
+         @include on-hover-focus(background-color, $base-color + #222);
+
+         &.current {
+
+            @include set-colors($background: white, $text: $base-color - #111,
+                                $border: $accent-color);
+         }
+
+         &:not(.current) {
+
+            @include light-text-on-dark;
+         }
+      }
    }
 
    #logo {
-      @include set-colors(null, $cyan);
-      @include on-hover-focus(background-color, $purple);
-
-      margin-bottom: 2.5em;
-      border-bottom-width: 0;
-
-      img {
-         vertical-align: bottom;
-      }
+      vertical-align: bottom;
    }
 }
 
 main {
-   @include set-font($font-stack, normal, 400);
-   @include set-colors(nth($grayscale, 1));
-
    line-height: 1.8;
+
+   @include set-font($font-stack, normal, 400);
+   @include set-colors($text: #222);
 
    & > :first-child {
       margin-top: 0;
    }
 
    h1, h2 {
+
       @include set-font($font-stack, normal, 300);
-      @include set-colors(nth($grayscale, 2));
+      @include set-colors($text: #888);
    }
 
    h2 {
@@ -81,6 +86,6 @@ main {
       border: 0;
       width: 1em;
       height: 1em;
-      background-color: nth($grayscale, 3);
+      background-color: #ccc;
    }
 }
