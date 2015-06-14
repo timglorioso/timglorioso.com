@@ -13,8 +13,10 @@
    background-color: $background;
 
    @if $border {
-      border-bottom: 0 solid $border;
+      border: 0 solid $border;
       text-decoration: none;
+   } @else {
+      border: 0;
    }
 }
 
@@ -35,56 +37,56 @@
    -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin set-dimensions($margins: null, $paddings: null, $widths: null,
-                      $font-sizes: null, $nav-pos: null) {
+@mixin header-on-left($header-width: 24%) {
 
-   nav {
-      @if $nav-pos {
-         position: $nav-pos;
-      } @else {
-         margin: auto;
-      }
-      padding: map-get($paddings, 'nav');
-      width: map-get($widths, 'nav');
+   html,
+   body,
+   header {
+      height: 100%;
+   }
 
-      a {
-         font-size: map-get($font-sizes, 'a');
-      }
+   header {
+      position: fixed;
+      width: $header-width;
 
       #logo {
-         @if $nav-pos == null {
-            margin-top: 2.5em;
-         }
+         width: 40%;
+         margin: 30%;
+      }
 
-         img {
-            width: map-get($widths, 'nav');
-            // reset font-size to equate width ems
-            font-size: 16px;
+      nav a {
+         display: block;
+         float: right;
+         clear: right;
+         width: $header-width;
+         text-align: left;
+
+         @include on-hover-focus(border-left-width, $tab-border-width);
+
+         &.current {
+            border-left-width: $tab-border-width;
          }
       }
    }
+}
 
-   main {
-      @if $nav-pos {
-         margin-left: map-get($margins, 'main');
-      } @else {
-         hr {
-            margin: 4em auto;
+@mixin header-on-top($logo-width) {
+
+   header {
+
+      #logo {
+         width: $logo-width;
+         margin: $logo-width * .7;
+      }
+
+      nav a {
+         display: inline-block;
+
+         @include on-hover-focus(border-top-width, $tab-border-width);
+
+         &.current {
+            border-top-width: $tab-border-width;
          }
-      }
-      padding: map-get($paddings, 'main');
-      width: map-get($widths, 'main');
-
-      h1 {
-         font-size: map-get($font-sizes, 'h1');
-      }
-
-      h2 {
-         font-size: map-get($font-sizes, 'h2');
-      }
-
-      p, li {
-         font-size: map-get($font-sizes, 'p');
       }
    }
 }

@@ -9,50 +9,30 @@
 // phones (portrait)
 @media (max-width: 500px) {
 
-   @include set-dimensions($paddings: ('nav': 5%, 'main': 5%),
-                           $widths: ('nav': 7em, 'main': 90%),
-                           $font-sizes: ('a': 1.75em, 'h1': 2.25em,
-                                         'h2': 1.5em, 'p': 1.125em));
+   @include header-on-top($logo-width: 33%);
 }
 
 // tablets (portrait), phones (landscape)
 @media (min-width: 500px) and (max-width: 900px) {
 
-   @include set-dimensions($paddings: ('nav': 8%, 'main': 8%),
-                           $widths: ('nav': 8em, 'main': 84%),
-                           $font-sizes: ('a': 2em, 'h1': 2.5em, 'h2': 1.75em,
-                                         'p': 1.25em));
+   @include header-on-top($logo-width: 22%);
 }
 
 // small/medium desktop displays, tablets (landscape)
 @media (min-width: 900px) and (max-width: 1400px) {
 
-   @include set-dimensions($margins: ('main': 22%),
-                           $paddings: ('nav': 4em, 'main': 6em 4em),
-                           $widths: ('nav': 6em, 'main': 60%),
-                           $font-sizes: ('a': 1.625em, 'h1': 2.5em,
-                                         'h2': 1.75em, 'p': 1.25em),
-                           $nav-pos: fixed);
+   @include header-on-left;
 }
 
 // large desktop displays
 @media (min-width: 1400px) and (max-width: 2000px) {
 
-   @include set-dimensions($margins: ('main': 24%),
-                           $paddings: ('nav': 5em, 'main': 7em 5em),
-                           $widths: ('nav': 7em, 'main': 55%),
-                           $font-sizes: ('a': 1.75em, 'h1': 2.75em,
-                                         'h2': 2em, 'p': 1.5em),
-                           $nav-pos: fixed);
+   @include header-on-left;
 }
 
 // very large desktop displays
 @media (min-width: 2000px) {
 
-   @include set-dimensions($margins: ('main': 25%),
-                           $paddings: ('nav': 6em, 'main': 9em 6em),
-                           $widths: ('nav': 8em, 'main': 50%),
-                           $font-sizes: ('a': 2em, 'h1': 3em, 'h2': 2.25em,
-                                         'p': 1.75em),
-                           $nav-pos: fixed);
+   @include header-on-left;
+
 }
