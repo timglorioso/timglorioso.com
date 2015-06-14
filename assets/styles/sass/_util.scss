@@ -1,3 +1,5 @@
+@import 'global-vars';
+
 @mixin set-font($stack, $style, $weight) {
 
    font-family: $stack;

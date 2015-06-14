@@ -3,8 +3,7 @@
 // Sets up all font styles, excepting size (taken care of in viewports.scss).
 
 @import 'util';
-
-$font-name: 'Clear Sans';
+@import 'global-vars';
 
 @font-face {
    src: url('../fonts/clearsans-light.woff')
