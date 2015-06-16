@@ -34,7 +34,65 @@
          </nav>
       </header>
 
-      <main>
+      <main id='posts'>
+
+         {block:Posts}
+         <article>
+
+            {block:Date}
+               <a href='{Permalink}'>
+                  {MonthNumber} /
+                  {DayOfMonth} /
+                  {ShortYear}
+               </a>
+            {/block:Date}
+
+            {block:Text}
+            <div class='post-content text-post'>
+               {block:Title}
+               <h1>
+                  {Title}
+               </h1>
+               {/block:Title}
+               {Body}
+            </div>
+            {/block:Text}
+
+            {block:HasTags}
+            <footer class='post-tags'>
+               {block:Tags}
+               <a href='{TagURL}'
+                  class='tag'>
+                  #{Tag}
+               </a>
+               {/block:Tags}
+            </footer>
+            {/block:HasTags}
+
+         </article>
+         {/block:Posts}
+
+         {block:Pagination}
+         <footer id='pagination'>
+            {block:PreviousPage}
+            <a href='{PreviousPage}'
+               class='link-button'>
+               <span>
+                  &#60;
+               </span>
+            </a>
+            {/block:PreviousPage}
+            {block:NextPage}
+            <a href='{NextPage}'
+               class='link-button'
+               id='hold-right'>
+               <span>
+                  &#62;
+               </span>
+            </a>
+            {/block:NextPage}
+         </footer>
+         {/block:Pagination}
 
       </main>
 
