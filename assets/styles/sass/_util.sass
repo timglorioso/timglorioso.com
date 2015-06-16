@@ -11,12 +11,7 @@
 
    color: $text
    background-color: $background
-
-   @if $border
-      border: 0 solid $border
-      text-decoration: none
-   @else
-      border: 0
+   border-color: $border
 
 
 =on-hover-focus($property, $value, $duration: null)
@@ -56,10 +51,11 @@
          width: $header-width + 2%
          text-align: left
 
-         +on-hover-focus(border-left-width, $tab-border-width)
+         +on-hover-focus(border-width, 0 0 0 $tab-border-width)
 
          &.current
-            border-left-width: $tab-border-width
+            border-width: 0 0 0 $tab-border-width
+
 
 
 =header-on-top($logo-width)
@@ -73,7 +69,7 @@
       nav a
          display: inline-block
 
-         +on-hover-focus(border-top-width, $tab-border-width)
+         +on-hover-focus(border-width, $tab-border-width 0 0 0)
 
          &.current
-            border-top-width: $tab-border-width
+            border-width: $tab-border-width 0 0 0
