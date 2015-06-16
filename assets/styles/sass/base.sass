@@ -1,0 +1,68 @@
+// base.scss
+//
+// Defines universal styles. See viewports.scss for styles that depend on the
+// viewport.
+
+@import fonts
+@import util
+@import global-vars
+
+$font-stack: $font-name, sans-serif
+
+a
+   +set-font($font-stack, normal, 400)
+   +set-colors($text: #fff, $border: #888)
+
+header
+   text-align: center
+
+   +set-colors($background: $base-color)
+
+   #logo
+      vertical-align: bottom
+
+   nav a
+      padding: .5em 1.1em .7em 1.1em
+      font-size: 1.25em
+      text-transform: lowercase
+
+      +set-colors($background: $base-color + #111, $border: $base-color + #111)
+      +on-hover-focus(background-color, $base-color + #222)
+
+      &.current
+         +set-colors($background: white, $text: $base-color, $border: $accent-color)
+
+      &:not(.current)
+         +light-text-on-dark
+
+main
+   line-height: 1.8
+
+   +set-font($font-stack, normal, 400)
+   +set-colors($text: #222)
+
+   & > :first-child
+      margin-top: 0
+
+   h1, h2
+      +set-font($font-stack, normal, 300)
+      +set-colors($text: #888)
+
+   h2
+      margin-top: 4em
+
+   ul
+      padding-left: 0
+
+      li
+         list-style-type: none
+
+   p
+      margin: 1.5em 0
+
+   hr
+      margin: 4em 0
+      border: 0
+      width: 1em
+      height: 1em
+      background-color: #ccc

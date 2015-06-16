@@ -1,0 +1,79 @@
+@import global-vars
+
+=set-font($stack, $style, $weight)
+
+   font-family: $stack
+   font-style: $style
+   font-weight: $weight
+
+
+=set-colors($text: null, $background: null, $border: null)
+
+   color: $text
+   background-color: $background
+
+   @if $border
+      border: 0 solid $border
+      text-decoration: none
+   @else
+      border: 0
+
+
+=on-hover-focus($property, $value, $duration: null)
+
+   @if $duration
+      transition: $property $duration linear
+
+   &:hover, &:focus
+      #{$property}: $value
+
+
+=light-text-on-dark
+
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+
+
+=header-on-left($header-width: 22%)
+
+   html,
+   body,
+   header
+      height: 100%
+
+   header
+      position: fixed
+      width: $header-width
+
+      #logo
+         width: 38%
+         margin: 30%
+
+      nav a
+         display: block
+         float: right
+         clear: right
+         width: $header-width + 2%
+         text-align: left
+
+         +on-hover-focus(border-left-width, $tab-border-width)
+
+         &.current
+            border-left-width: $tab-border-width
+
+
+=header-on-top($logo-width)
+
+   header
+
+      #logo
+         width: $logo-width
+         margin: $logo-width * .7
+
+      nav a
+         display: inline-block
+
+         +on-hover-focus(border-top-width, $tab-border-width)
+
+         &.current
+            border-top-width: $tab-border-width
