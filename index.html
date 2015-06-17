@@ -39,25 +39,30 @@
          {block:Posts}
          <article>
 
-            {block:Date}
-               <a href='{Permalink}'>
-                  {MonthNumber} /
-                  {DayOfMonth} /
-                  {ShortYear}
-               </a>
-            {/block:Date}
-
             {block:Text}
             <div class='post-content text-post'>
-               {block:Title}
-               <h1>
-                  {Title}
-               </h1>
-               {/block:Title}
+               <hgroup>
+                  {block:Title}
+                  <h1 class='post-title'>
+                     <a href='{Permalink}'>{Title}</a>
+                  </h1>
+                  {/block:Title}
+                  {block:Date}
+                  <h2 class='post-date'>
+                     {MonthNumber} /
+                     {DayOfMonth} /
+                     {ShortYear}
+                  </h2>
+                  {/block:Date}
+               </hgroup>
                {Body}
+               {block:More}
+               <a href='{Permalink}' class='more'>keep reading...</a>
+               {/block:More}
             </div>
             {/block:Text}
 
+            <!--
             {block:HasTags}
             <footer class='post-tags'>
                {block:Tags}
@@ -68,6 +73,7 @@
                {/block:Tags}
             </footer>
             {/block:HasTags}
+            -->
 
          </article>
          {/block:Posts}
@@ -75,19 +81,17 @@
          {block:Pagination}
          <footer id='pagination'>
             {block:PreviousPage}
-            <a href='{PreviousPage}'
-               class='link-button'>
+            <a href='{PreviousPage}'>
                <span>
-                  &#60;
+                  newer
                </span>
             </a>
             {/block:PreviousPage}
             {block:NextPage}
             <a href='{NextPage}'
-               class='link-button'
                id='hold-right'>
                <span>
-                  &#62;
+                  older
                </span>
             </a>
             {/block:NextPage}
