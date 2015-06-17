@@ -10,69 +10,75 @@
 $font-stack: $font-name, sans-serif
 
 body
-   +set-font($font-stack, normal, 400)
+   +set-font($stack: $font-stack, $style: normal, $weight: 400)
 
 a
    border-style: solid
    text-decoration: none
 
 header
+   +set-colors($background: $base-gray)
    text-align: center
-
-   +set-colors($background: $base-color)
 
    #logo
       vertical-align: bottom
 
    nav a
-      padding: .5em 1.1em .7em 1.1em
-      font-size: 1.25em
+      +set-box-model($padding: .5em 1.1em .7em)
+      +set-colors($background: $base-gray + #111, $text: #fff, $border: $base-gray + #111)
+      +set-font($size: 1.25em)
+      +on-hover-focus(background-color, $base-gray + #222)
       text-transform: lowercase
 
-      +set-colors($background: $base-color + #111, $text: white, $border: $base-color + #111)
-      +on-hover-focus(background-color, $base-color + #222)
-
       &.current
-         +set-colors($background: white, $text: $base-color, $border: $accent-color)
+         +set-colors($background: #fff, $text: $base-gray, $border: $cyan)
 
       &:not(.current)
-         border-width: 0
-
+         +set-box-model($border: 0)
          +light-text-on-dark
 
 main
+   +set-colors($text: $base-gray)
    line-height: 1.8
 
-   +set-colors($text: $base-color)
-
    a
-      border-width: 0 0 2px 0
+      +set-box-model($border: 0 0 2px)
+      +set-colors($text: $base-gray + #333, $border: $base-gray + #999)
+      +on-hover-focus(border-color, $cyan)
 
-      +set-colors($text: $base-color + #222, $border: $base-color + #666)
-      +on-hover-focus(border-color, $accent-color)
-
-   & > :first-child
-      margin-top: 0
-
-   h1, h2
-      +set-font($font-stack, normal, 300)
-      +set-colors($text: $base-color + #444)
-
-   h2
-      margin-top: 4em
-
-   ul
-      padding-left: 0
-
-      li
-         list-style-type: none
+   h1:first-of-type
+      +set-box-model($margin: 0 auto auto)
 
    p
-      margin: 1.5em 0
+      +set-box-model($margin: 1.5em 0)
+      +set-font($size: 1.125em)
 
    hr
-      margin: 4em 0
-      border: 0
-      width: 1em
-      height: 1em
-      background-color: $base-color + #999
+      +set-box-model($margin: 3em 0, $border: 0, $width: 1em, $height: 1em)
+      +set-colors($background: $base-gray + #999)
+
+   article
+      +set-box-model($margin: 0 0 5em)
+
+   .post-title
+      +set-colors($text: $base-gray + #333)
+      +set-font($weight: 400, $size: 1.75em)
+
+      a
+         +set-box-model($border: 0)
+         +set-colors($text: $base-gray + #333)
+         +on-hover-focus(color, $base-gray + #555)
+
+   .post-date
+      +set-box-model($margin: 0 auto 1em)
+      +set-colors($text: $base-gray + #555)
+      +set-font($weight: 400, $size: 1.125em)
+
+   .more,
+   #pagination a
+      +set-box-model($border: 0)
+      +set-colors($text: $base-gray + #555)
+      +on-hover-focus(color, $base-gray + #777)
+
+   #pagination
+      +set-box-model($padding: 0 0 .5em)
