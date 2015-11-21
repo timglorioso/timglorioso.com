@@ -1,1 +1,1 @@
-In an unexpected twist, this repository entitled "timglorioso.com" contains source code for my website: [timglorioso.com](http://timglorioso.com).
+Please note: this repository is no longer used, but kept as a record. You know, like nostalgia or something.
